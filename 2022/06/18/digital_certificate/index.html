@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Linux常用命令 | Hexo</title>
+  <title>数字证书 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="find1234567$ find . -name &quot;[a-z]*me.txt&quot; -print.&#x2F;www&#x2F;html&#x2F;sqli_labs&#x2F;readme.txt$ find . -name &quot;*[0-9].txt&quot; -print.&#x2F;www&#x2F;html&#x2F;sqli_labs&#x2F;Less-43&#x2F;Text-2.txt  grep12345678910111213141516">
+  <meta name="description" content="数字证书简介 对称加密：单秘钥、双向 非对称加密：双秘钥、双向 哈希算法：无秘钥、单向、哈希值特定长度，唯一  数字签名简单介绍一个数字签名的应用场景：  Alice将信息m经过hash运算得到哈希值h。再用私钥进行签名运算得到数字签名s。 Alice将公钥pub、信息m和数字签名s一同发送给Bob。 Bob先利用Alice的公钥pub对数字签名s解密得到文件hash值h1，再对收到的信息m进行h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令">
-<meta property="og:url" content="http://example.com/2022/06/14/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="数字证书">
+<meta property="og:url" content="http://example.com/2022/06/18/digital_certificate/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="find1234567$ find . -name &quot;[a-z]*me.txt&quot; -print.&#x2F;www&#x2F;html&#x2F;sqli_labs&#x2F;readme.txt$ find . -name &quot;*[0-9].txt&quot; -print.&#x2F;www&#x2F;html&#x2F;sqli_labs&#x2F;Less-43&#x2F;Text-2.txt  grep12345678910111213141516">
+<meta property="og:description" content="数字证书简介 对称加密：单秘钥、双向 非对称加密：双秘钥、双向 哈希算法：无秘钥、单向、哈希值特定长度，唯一  数字签名简单介绍一个数字签名的应用场景：  Alice将信息m经过hash运算得到哈希值h。再用私钥进行签名运算得到数字签名s。 Alice将公钥pub、信息m和数字签名s一同发送给Bob。 Bob先利用Alice的公钥pub对数字签名s解密得到文件hash值h1，再对收到的信息m进行h">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-14T14:35:12.000Z">
-<meta property="article:modified_time" content="2022-06-18T12:26:12.793Z">
+<meta property="article:published_time" content="2022-06-18T11:33:06.000Z">
+<meta property="article:modified_time" content="2022-06-18T12:25:33.526Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="security">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -155,31 +155,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-digital_certificate" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux常用命令
+      数字证书
     </h1>
   
 
         
-        <a href="/2022/06/14/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2022-06-14T14:35:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-14</time>
+        <a href="/2022/06/18/digital_certificate/" class="archive-article-date">
+  	<time datetime="2022-06-18T11:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">find . -name <span class="string">&quot;[a-z]*me.txt&quot;</span> -<span class="built_in">print</span></span></span><br><span class="line"></span><br><span class="line">./www/html/sqli_labs/readme.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">find . -name <span class="string">&quot;*[0-9].txt&quot;</span> -<span class="built_in">print</span></span></span><br><span class="line"></span><br><span class="line">./www/html/sqli_labs/Less-43/Text-2.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查找文件中含有<span class="keyword">in</span>的字符串</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep <span class="string">&quot;in&quot;</span> readme.txt</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep <span class="string">&#x27;in&#x27;</span> readme.txt</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在文件夹下的所有文件中查找</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep <span class="string">&#x27;in&#x27;</span> ./*</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">若目录下还有多级子目录</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep -r <span class="string">&#x27;in&#x27;</span> ./*</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">行首查找</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep -r <span class="string">&#x27;^in&#x27;</span> ./*</span></span><br><span class="line"></span><br><span class="line">./Less-24/index.php:include(&quot;../sql-connections/sql-connect.php&quot;);</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">行尾查找</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">grep -r <span class="string">&#x27;tion$&#x27;</span> ./*</span></span><br><span class="line"></span><br><span class="line">./Less-38/index.php:// Check connection</span><br></pre></td></tr></table></figure>
-
-<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3>
+        <h1 id="数字证书简介"><a href="#数字证书简介" class="headerlink" title="数字证书简介"></a>数字证书简介</h1><ul>
+<li>对称加密：单秘钥、双向</li>
+<li>非对称加密：双秘钥、双向</li>
+<li>哈希算法：无秘钥、单向、哈希值特定长度，唯一</li>
+</ul>
+<h3 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h3><p>简单介绍一个数字签名的应用场景：</p>
+<ol>
+<li>Alice将信息m经过hash运算得到哈希值h。再用私钥进行签名运算得到数字签名s。</li>
+<li>Alice将公钥pub、信息m和数字签名s一同发送给Bob。</li>
+<li>Bob先利用Alice的公钥pub对数字签名s解密得到文件hash值h<del>1</del>，再对收到的信息m进行hash运算得到哈希值h<del>2</del>。如果h<del>1</del>&#x3D;h<del>2</del>，则说明Bob接受的消息就是私钥拥有者发送的，且未经篡改。</li>
+</ol>
+<p><strong>疑问</strong>：收发双方的hash函数如何确保相同的？</p>
+<blockquote>
+<p>hash函数<strong>可能</strong>存在于证书中或者通信双方通过协议沟通确定<a href="%5B%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8C%81%E6%94%B6%E5%8F%91%E5%8F%8C%E6%96%B9%E7%9A%84HASH%E5%87%BD%E6%95%B0%E4%B8%80%E8%87%B4%5D(https://blog.csdn.net/weixin_44124323/article/details/103602721)">^1</a></p>
+</blockquote>
+<p>但是，以上方法存在另一个问题，私钥拥有者就是Alice吗？为了解决这个问题，引入<strong>数字证书</strong>。</p>
+<h3 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h3><p>用处：用来证明公钥的生成者的身份</p>
+<ol>
+<li>Alice将自己的部分个人信息和公钥发送给权威的证书颁发机构（CA机构）。CA机构核实信息后，为Alice颁发数字证书，其中包含Alice的个人信息和公钥。</li>
+<li>Alice将该证书放在互联网上，Bob基于该证书，就可以确定哪一个公钥是Alice提供的。</li>
+</ol>
+<p>如何确保数字证书不会被伪造？</p>
+<ol>
+<li>CA机构自己也有一套公钥和私钥，利用自己的私钥对Alice的身份信息&amp;公钥信息进行数字签名运算，得到数字签名S<del>CA</del>放在Alice的数字证书中。</li>
+<li>在每个人的主机中安装了CA机构的根证书，根证书中记录了CA机构的信息和公钥。根证书预先安装在系统中杜绝了CA机构的公钥被伪造的风险。</li>
+<li>基于根证书中的公钥和S<del>CA</del>，可以验证Alice的数字证书中的信息是否被伪造。</li>
+</ol>
+<h1 id="SSL证书简介"><a href="#SSL证书简介" class="headerlink" title="SSL证书简介"></a>SSL证书简介</h1><h3 id="SSL证书"><a href="#SSL证书" class="headerlink" title="SSL证书"></a>SSL证书</h3><blockquote>
+<p>通常，CA机构可以颁发各种数字证书，其中包括SSL证书、邮件证书、加密证书、软件数字证书等。</p>
+</blockquote>
+<p>Secure Sockets Layer：安全套接层协议</p>
+<p>SSL证书用于浏览器和服务器之间进行https安全通信。</p>
+<h3 id="服务器安装SSL证书"><a href="#服务器安装SSL证书" class="headerlink" title="服务器安装SSL证书"></a>服务器安装SSL证书</h3><ol>
+<li>服务器生成证书请求文件CSR</li>
+<li>申请SSL证书</li>
+<li>下载证书</li>
+<li>证书上传到服务器上专门存放证书和秘钥文件的文件夹中</li>
+<li>修改http.conf文件或者ssl.conf文件</li>
+<li>重启服务器测试</li>
+</ol>
+<p>具体流程参考资料<a href="%5B%E5%A6%82%E4%BD%95%E7%BB%99%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85SSL%E8%AF%81%E4%B9%A6%EF%BC%9F%5D(https://developer.aliyun.com/article/710045)">^2</a></p>
+<h3 id="SSL加速器"><a href="#SSL加速器" class="headerlink" title="SSL加速器"></a>SSL加速器</h3><p><strong>问题</strong>：SSL协议集成在浏览器和web服务器中，用于浏览器和服务器之间进行https传输。但是SSL认证过程涉及加解密算法复杂，大流量交易时会消耗服务器中cpu的大量资源。</p>
+<p>SSL加速器作为专用的硬件设备，处理SSL任务，解决了大计算量对服务器的资源消耗问题。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1>
       
 
       
@@ -213,7 +252,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">security</a>
         		</li>
       		
 		</ul>
@@ -269,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/14/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/18/digital_certificate/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +322,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/06/18/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数字证书
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/06/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2022/06/14/linux_commands/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,11 +450,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">security</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">security</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
             <div class="clearfix"></div>
